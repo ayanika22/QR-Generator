@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+    margin: -50px 70px;
+}
+h1{
+    text-align: center;
+}
+.form{
+    max-width: 520px;
+    padding: 15px 30px;
+    border: 1px solid green;
+    height: 74vh;
+    font-size: 10pt;
+}
+.qr{
+    display: flex;
+    flex-direction: column;
+    height: 79vh;
+    width: 450px;
+    border: 1px solid #008000;
+    justify-content: center;
+    padding: 0;
+}
+input{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 1em;
+    margin-top: 0.2em;
+    padding: 0.2em 0.5em;
+}
+textarea{
+    width: 500px;
+    height: 80px;
+    margin-top: 0.2em;
+    padding: 0.2em 0.5em;
+}
+#qr{
+    align-self: center;
+    height: auto;
+    width: 425px;
+    position: relative;
+    top: -10px;
+}
+.clear, .submit, .display-download  {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(36, 36, 36);
+    color: azure;
+}
+
+.download{
+    height: 30px;
+    margin-left: 40px;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+#download{
+    height: 15px;
+    width: auto;
+}
+.display-download{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: -7px;
+}
+@media ((max-width: 1040px)) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        height:auto;
+        margin: 40px auto;
+    }
+    .form{
+        width: 400px;
+        padding: 15px 30px;
+        border: 1px solid green;
+        height: 74vh;
+        font-size: 10pt;
+    }
+    .qr{
+        display: flex;
+        flex-direction: column;
+        height: 79vh;
+        max-width: 400px;
+        border: 1px solid #008000;
+        justify-content: center;
+        padding: 0;
+    }
+    input{
+        width: 380px;
+        height: 30px;
+        margin-bottom: 1em;
+        margin-top: 0.2em;
+        padding: 0.2em 0.5em;
+    }
+    textarea{
+        width: 380px;
+        height: 80px;
+        margin-top: 0.2em;
+        padding: 0.2em 0.5em;
+    }
+    #qr{
+        align-self: center;
+        height: auto;
+        width: 400px;
+        position: relative;
+        top: -15px;
+    }
+}

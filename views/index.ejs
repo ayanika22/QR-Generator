@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR-Generator</title>
+    <link rel="shortcut icon" href="fav-qr.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Generate Your Own QR</h1>
+    <div class="container">
+      <div class="form">
+        <form action="/generate-qr" method="get">
+          <label for="Name">Name</label>
+          <input
+            type="text"
+            placeholder="Your name here"
+            name="Name"
+            value="<%= Name %>"
+          />
+          <label for="Email">Email</label>
+          <input
+            type="email"
+            name="Email"
+            id="email"
+            placeholder="Your email here"
+            value="<%= Email %>"
+          />
+          <label for="Website">Website</label>
+          <input
+            type="url"
+            name="Website"
+            id="website"
+            placeholder="Your website here"
+            value="<%= Website %>"
+          />
+          <label for="Contact">Contact</label>
+          <input
+            type="text"
+            placeholder="Your contact here"
+            name="Contact"
+            value="<%= Contact %>"
+          />
+          <label for="info">Additional Information</label><br/>
+          <textarea name="info" placeholder="Any additional info"><%= info %></textarea
+          ><br /><br />
+          <button type="submit" class="submit">Generate QR</button>
+          
+        </form>
+      </div>
+      <div class="qr">
+        <% if( qrDataUri !== "undefined") {%>
+        <img src="<%= qrDataUri%>" id="qr" />
+        <%}%>
+        <div class="download">
+          <button type="button" class="display-download" >
+            <a href="<%= qrDataUri%>" download="Generated QR.png" >Download </a
+            ><img src="download.png" id="download" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
